@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Контроллер скорости YouTube</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 20px;
+      width: 300px;
+      background-color: #f4f4f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      font-size: 20px;
+      margin: 0 0 20px;
+      text-align: center;
+      color: #333;
+      font-weight: 400;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+    }
+    .card {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card span {
+      font-size: 14px;
+      color: #555;
+    }
+    .card button {
+      background-color: #28A745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .card button:hover {
+      background-color: #218838;
+    }
+    .instructions {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-size: 14px;
+      color: #555;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Установить скорость</h1>
+  <div class="container">
+    <div class="card">
+      <span>Базовая скорость: <span id="baseSpeedDisplay">1.0x</span></span>
+      <button id="saveBaseButton">Обновить</button>
+    </div>
+    <div class="instructions">
+      Для изменения скорости воспроизведения используйте комбинацию Shift + прокрутка колесика мыши.<br>
+      После изменения скорости нажмите "Обновить" в интерфейсе для сохранения новой базовой скорости.
+      Текущая скорость будет отображаться внизу слева на экране.
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
